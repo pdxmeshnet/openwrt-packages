@@ -43,9 +43,6 @@ TARGET_LDFLAGS += -llua -lpthread
 
 LUA_MODULE_PATH:=/usr/lib/lua
 
-define Build/Configure
-endef
-
 define Build/Compile
 	$(TARGET_CROSS)gcc $(TARGET_CFLAGS) $(TARGET_LDFLAGS) -o $(PKG_BUILD_DIR)/luaproc.so $(PKG_BUILD_DIR)/src/lpsched.c $(PKG_BUILD_DIR)/src/luaproc.c
 endef
